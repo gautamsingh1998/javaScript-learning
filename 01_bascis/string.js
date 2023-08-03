@@ -27,4 +27,5 @@ console.log(newStringOne.trim()); // remove the space
 
 const url = "https://gautam.com/gautam%20singh"
 console.log(url.replace("%20", '-'));
-console.log(url.includes('sundar'));
+console.log(url.includes('sundar')); // false
+
