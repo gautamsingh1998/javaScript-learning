@@ -14,6 +14,7 @@ const JsUser = {
     isLoggedIn: false,
     lastLoginDays: ["Monday","Saturday"],
 }
+
 console.log(JsUser.email);
 console.log(JsUser["email"]);
 console.log(JsUser["full name"]);
@@ -21,6 +22,7 @@ console.log(JsUser[mySym]);
 
 JsUser.email = "gautamsingh@luminoguru.com"
 //Object.freeze(JsUser)
+
 JsUser.email = "gautamsingh@microsoft.com"
 
 console.log(JsUser);
@@ -34,11 +36,13 @@ JsUser.greetingTwo = function() {
 }
 
 console.log(JsUser.greeting());
+
 console.log(JsUser.greetingTwo());
 
 // Object singlton
 
 //const tinderUser = new Object()
+
 const tinderUser = {}
 
 tinderUser.id = "1213abc"
@@ -56,11 +60,57 @@ const regularUser = {
         }
     }
 }
+
 console.log(regularUser.fullName.userFullName.firstName);
 
 const obj1 = {1: "a", 2: "b"}
 const obj2 = {3: "a", 4: "b"}
 
 //const obj3 = {obj1,obj2}
+
 const obj3 = Object.assign(obj1,obj2)
+
 console.log(obj3);
+
+const users = [
+    {
+        id: 1,
+        email: "gautamsinghcpj@gmail.com"
+    },
+    {
+        id: 1,
+        email: "gautamsinghcpj@gmail.com"
+    },
+    {
+        id: 1,
+        email: "gautamsinghcpj@gmail.com"
+    },
+]
+
+users[1].email
+
+console.log(tinderUser);
+
+console.log(Object.keys(tinderUser));
+
+console.log(Object.values(tinderUser));
+
+console.log(Object.entries(tinderUser));
+
+console.log(tinderUser.hasOwnProperty('isLogged'));
+
+const course = {
+    courseNme: "Js in Hindi",
+    price: "999",
+    courseInstructor: "Gautam"
+}
+
+const {courseInstructor: instructor} = course
+//console.log(courseInstructor);
+console.log(instructor);
+
+const navbar = ({company}) => {
+
+}
+
+navbar(company = "gautam")
